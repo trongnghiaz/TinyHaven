@@ -7,7 +7,7 @@ namespace TinyHaven.Api.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<AppUsers> Users => Set<AppUsers>();
+        public DbSet<AppUser> Users => Set<AppUser>();
         public DbSet<Models.CountdownEvent> CountdownEvents => Set<Models.CountdownEvent>();
         public DbSet<DiaryEntry> DiaryEntries => Set<DiaryEntry>();
         public DbSet<AlbumPhoto> AlbumPhotos => Set<AlbumPhoto>();
@@ -17,7 +17,7 @@ namespace TinyHaven.Api.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<AppUsers>(e =>
+            modelBuilder.Entity<AppUser>(e =>
             {
                 e.ToTable("app_users");
                 e.HasKey(x => x.Id);

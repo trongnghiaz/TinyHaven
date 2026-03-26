@@ -11,7 +11,7 @@
         public string? Caption { get; set; }
 
         public Guid UploadedById { get; set; }
-        public AppUsers? UploadedBy { get; set; }
+        public AppUser? UploadedBy { get; set; }
 
         public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
 
