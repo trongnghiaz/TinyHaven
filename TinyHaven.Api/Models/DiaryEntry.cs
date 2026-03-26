@@ -9,7 +9,7 @@
         public bool IsDeleted { get; set; } = false;
 
         public Guid CreatedById { get; set; }
-        public AppUsers? CreatedBy { get; set; }
+        public AppUser? CreatedBy { get; set; }
 
         public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
         public DateTimeOffset? UpdatedAt { get; set; }
